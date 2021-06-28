@@ -78,7 +78,24 @@ button {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
+    color: white;
+}
+
+a :hover {
+    color: white;
+}
+
+#btnClr {
+    background: #9DABC6;
+    color: white;
+    padding: 0.8em 1em;
+    border-radius: 10px;
+}
+
+#btnClr:hover {
+    background: #8996b1;
+    color: white;
 }
 
 .none {
@@ -86,85 +103,68 @@ a {
     font-size: 1em;
 }
 
-.accordion>input[name="collapse"] {
-    display: none;
-    /*position: absolute;
-    left: -100vw;*/
-}
-
-.accordion label,
-.accordion .content {
-    max-width: 2000px;
-    margin: 0 auto;
-}
-
-.accordion .content {
-    background: #1C2331;
-    overflow: hidden;
-    height: 0;
-    transition: 0.5s;
-    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.accordion>input[name="collapse"]:checked~.content {
-    height: 500px;
-    transition: height 0.5s;
-}
-
-.accordion label {
-    display: block;
+.ceva {
+    margin-right: 0 !important;
+    padding-right: 0 !important;
 }
 
 
-/* For Desktop */
+/* Despre */
 
-@media only screen and (min-width: 620px) {
-    .accordion>input[name="collapse"]:checked~.content {
-        height: fit-content;
-    }
+.btnDespre {
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    border-bottom: 1px solid white;
 }
 
-.accordion {
+.lead {
+    font-family: 'Noto Sans', serif;
+    font-size: 1em;
+}
+
+.title {
+    font-family: 'Noto Sans', serif;
+    font-size: 1.5em;
+}
+
+.file {
     margin-bottom: 1em;
 }
 
-.accordion>input[name="collapse"]:checked~.content {
-    border-top: 0;
-    transition: 0.3s;
+.fileTitle {
+    /* background: rgba(255, 255, 255, 0.2); */
+    background: #9DABC6;
+    color: white;
+    padding: 1em;
+    border-radius: 10px;
 }
 
-.accordion .handle {
-    margin: 0;
-    font-size: 16px;
+.fileTitleStg {
+    background: #9DABC6;
+    color: white;
+    padding: 1em;
+    border-radius: 10px;
+    margin-right: 1em;
 }
 
-.accordion label {
-    color: #fff;
-    cursor: pointer;
-    font-weight: normal;
-    padding: 10px;
-    background: #0c0a74;
-    user-select: none;
+.fileTitle:hover,
+.fileTitleStg:hover {
+    background: #8996b1;
+    color: white;
 }
 
-.accordion label:hover,
-.accordion label:focus {
-    background: #252525;
+
+/*Contact*/
+
+.btnSend {
+    background: #9DABC6;
+    color: white;
+    padding: 0.5em;
+    border-radius: 10px;
 }
 
-.accordion .handle label:before {
-    font-family: fantasy;
-    content: icon;
-    display: inline-block;
-    margin-right: 10px;
-    font-size: 1em;
-    line-height: 1.556em;
-    vertical-align: middle;
-    transition: 0.4s;
-}
-
-.accordion>input[name="collapse"]:checked~.handle label:before {
-    transform: rotate(180deg);
-    transform-origin: center;
-    transition: 0.4s;
+.btnSend:hover {
+    background: #8996b1;
+    color: white;
 }
