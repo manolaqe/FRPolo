@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: #1C2331;
+    font-family: 'Noto Sans', serif;
+    height: 100%;
+}
+
+body {
+    color: rgb(223, 219, 219);
+    background-color: #1C2331;
+    font-family: 'Noto Sans', serif;
+}
+
+
+/* carduri persoane */
+
+.card {
+    background-color: rgb(223, 219, 219);
+    margin-bottom: 2em;
+}
+
+
+/* mici modificari */
+
+hr {
+    border-bottom: 1px solid black;
+}
+
+#ro {
+    border-bottom: 1px solid white;
+    margin-top: 10%;
+    margin-bottom: 2%;
+}
+
+#lot,
+#r1,
+#r2 {
+    color: black;
+    margin-bottom: 5%;
+}
+
+#btn {
+    margin-bottom: 1%;
+}
+
+h5 {
+    color: rgb(223, 219, 219);
+}
+
+#tabel {
+    margin-bottom: 2%;
+}
+
+#logo-polo {
+    background-color: white;
+    padding: 1%;
+    border-radius: 10px;
+}
