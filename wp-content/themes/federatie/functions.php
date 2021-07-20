@@ -1,12 +1,33 @@
 <?php
+function federatie_theme_support() {
+	add_theme_support('title-tag');
+}
+add_action( 'after_setup_theme', 'federatie_theme_support');
+
 
 function federatie_polo_styles() {
 	wp_enqueue_style( 'federatie-polo-style', get_template_directory_uri() . '/style.css', array(), _S_VERSION );
-	wp_enqueue_style( 'federatie-polo-bootstrap', get_template_directory_uri() . '/style.css', array(), _S_VERSION );
-	wp_enqueue_style( 'federatie-polo-fontawesome', get_template_directory_uri() . '/style.css', array(), _S_VERSION );
-	
+	wp_enqueue_style( 'federatie-polo-bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', array(), _S_VERSION );
+	wp_enqueue_style( 'federatie-polo-fontawesome','https://use.fontawesome.com/releases/v5.0.8/js/all.js', array(), _S_VERSION );
+	wp_enqueue_script( 'federatie-polo-jquery-scr', 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', array(), '3.3.1');
+	wp_enqueue_script( 'federatie-polo-script', get_template_directory_uri(). '/js/script.js', array('jquery'),_S_VERSION);
+	wp_enqueue_script( 'federatie-polo-popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', array(), '1.12.9');
+	wp_enqueue_script( 'federatie-polo-jquery-scr', 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', array(), '3.3.1');		
+
 }
 add_action( 'wp_enqueue_scripts', 'federatie_polo_styles' );
+
+function federatie_polo_scripts() {
+	wp_enqueue_script( 'federatie-polo-script', get_template_directory_uri(). '/js/script.js', array('jquery'),_S_VERSION, true );
+	wp_enqueue_script( 'federatie-polo-popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', array(), '1.12.9', true );
+	wp_enqueue_script( 'federatie-polo-jquery-scr', 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', array(), '3.3.1', true);	
+}
+add_action( 'wp_enqueue_scripts', 'federatie_polo_scripts');
+
+function wpb_custom_new_menu() {
+	register_nav_menu('my-custom-menu',__( 'My Custom Menu' ));
+  }
+add_action( 'init', 'wpb_custom_new_menu' );
 
 /**
  * federatie functions and definitions

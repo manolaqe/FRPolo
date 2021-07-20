@@ -1,8 +1,6 @@
 /*!
 Theme Name: Federatie Polo
-Theme URI: http://underscores.me/
-Author: Underscores.me
-Author URI: http://underscores.me/
+Author: Maria Tanasa & Mihai-Andrei Manolache
 Description: Description
 Version: 1.0.0
 Tested up to: 5.4
@@ -763,6 +761,23 @@ hr {
 
 /* Navbar */
 
+div.custom-menu-class ul {
+    margin: 20px 0px 20px 0px;
+    list-style-type: none;
+    list-style: none;
+    list-style-image: none;
+    text-align: right;
+}
+
+div.custom-menu-class li {
+    padding: 0px 28px 0px 2px;
+    display: inline;
+}
+
+div.custom-menu-class a {
+    color: #FFFFFF;
+}
+
 .no-bg {
     background-color: rgba(0, 0, 0, .2);
 }
@@ -779,7 +794,7 @@ hr {
 
 .navbar-nav a {
     font-family: 'Noto Sans', serif;
-    /* font-size: 1.1em; */
+    font-size: 1.15em;
     text-transform: uppercase;
 }
 
