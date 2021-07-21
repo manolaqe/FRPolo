@@ -24,11 +24,6 @@ function federatie_polo_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'federatie_polo_scripts');
 
-function wpb_custom_new_menu() {
-	register_nav_menu('my-custom-menu',__( 'My Custom Menu' ));
-  }
-add_action( 'init', 'wpb_custom_new_menu' );
-
 /**
  * federatie functions and definitions
  *
@@ -152,13 +147,6 @@ add_action( 'after_setup_theme', 'federatie_content_width', 0 );
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function federatie_widgets_init() {
-
-	
-add_image_size('post_image', 1100, 550, false);
-add_image_size('thumb_image', 500, 250, false);
-add_image_size('small_image', 500, 250, true);
-
-
 	register_sidebar(
 		array(
 			'name'          => esc_html__( 'Sidebar', 'federatie' ),
