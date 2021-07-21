@@ -18,6 +18,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"><!-- 
 <title>Federatia Romana de Polo</title> -->
 
+<script src="https://kit.fontawesome.com/9e91f3a34e.js" crossorigin="anonymous"></script>
+
 <?php
 wp_head();
 ?>

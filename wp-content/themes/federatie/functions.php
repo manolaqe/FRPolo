@@ -152,6 +152,13 @@ add_action( 'after_setup_theme', 'federatie_content_width', 0 );
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function federatie_widgets_init() {
+
+	
+add_image_size('post_image', 1100, 550, false);
+add_image_size('thumb_image', 500, 250, false);
+add_image_size('small_image', 500, 250, true);
+
+
 	register_sidebar(
 		array(
 			'name'          => esc_html__( 'Sidebar', 'federatie' ),
